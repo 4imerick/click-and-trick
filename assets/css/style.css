@@ -15,22 +15,75 @@
 :root {
   --black: #000000;
   --white: #ffffff;
+  --orange: #ff6600;
 }
 
 body {
   margin: 0;
   font-size: 16px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Creepster", cursive;
   text-align: left;
+  background-color: var(--orange);
 }
 
 /* ============================================================ */
 /* ============== MOBILE WITH SMALL SCREEN SIZE =============== */
 /* ============================================================ */
 @media screen and (min-width: 320px) {
+  .header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em 0 2em 0;
+    font-size: 2em;
+    text-align: center;
+  }
+
   .wrapper {
     display: flex;
     flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slot {
+    position: relative;
+    perspective: 1000px;
+  }
+
+  .slot div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+  }
+
+  .slot__button {
+    font-family: "Creepster", cursive;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12em;
+    height: 12em;
+    z-index: -1;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #000000;
+    color: var(--orange);
+    box-shadow: 0 0.45em 0 rgb(255, 255, 255);
+  }
+
+  .slot__button:active {
+    margin-top: 0.45em;
+    box-shadow: 0 0 0 rgb(0, 0, 0);
   }
 }
 
@@ -44,12 +97,28 @@ body {
 /* =============== MOBILE WITH LARGE SCREEN SIZE ============== */
 /* ============================================================ */
 @media screen and (min-width: 428px) {
+  .header {
+    font-size: 4em;
+  }
+
+  .slot__button {
+    width: 14em;
+    height: 14em;
+  }
 }
 
 /* ============================================================ */
 /* ========================== TABLET ========================== */
 /* ============================================================ */
 @media screen and (min-width: 768px) {
+  .header {
+    font-size: 6em;
+  }
+
+  .slot__button {
+    width: 16em;
+    height: 16em;
+  }
 }
 
 /* ============================================================ */

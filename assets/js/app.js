@@ -1,6 +1,8 @@
 const app = {
   init: function () {
     console.log("Hello world, I'm app.js 👑");
+
+    blowUp.init();
   },
 };
 

@@ -8,7 +8,7 @@ The **Click and Trick** project is a animation on the Halloween theme.
 - CSS 3
 - JavaScript ECMAScript 2020
 
-To use the projet you have to follow this steps:
+To use the projet follows these steps:
 
 - Git clone the `dev` branch of the repository
 - Go to the `template` folder
